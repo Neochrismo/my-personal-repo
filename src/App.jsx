@@ -8,7 +8,7 @@ import HeroSection from './component/HeroSection';
 import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionBox = motion.create(Box);  
+const MotionBox = motion.create(Box);
 const simpleFadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0,
@@ -35,22 +35,8 @@ function App(){
         >
         <ContactMeSection />
         </MotionBox>
-        <MotionBox
-          variants={simpleFadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
         <Services />
-        </MotionBox>
-        <MotionBox
-          variants={simpleFadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
         <Footer />
-        </MotionBox>
       </Box>
   );
 }

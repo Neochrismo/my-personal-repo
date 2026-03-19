@@ -14,7 +14,7 @@ const LandingSection = () => (
         alignItems="center"
         isDarkBackground
         backgroundColor="rgba(31, 37, 54, 1)"
-        display="flex"
+        display="grid"
         direction={{ base: "column", md: "row" }}
     >
         <VStack gap="16" w="100%">
@@ -24,7 +24,7 @@ const LandingSection = () => (
                         textAlign="center"
                         p="4"
                         w="0.600"
-                    > 
+                    >
                         <Heading as="h1" size="lg" textAlign="center" fontWeight="semibold">
                             {MyStory}
                         </Heading>
@@ -38,14 +38,14 @@ const LandingSection = () => (
                             <br />
                             I help clients transform ideas into meaningful digital experiences, that connect with people and grow businesses.
                             </Text>
-                    
+
                         <Spacer />
                         <Image
                             boxSize="250px"
                             src="/building.jpeg"
                             alt="Building What Matters"
                         />
-                </HStack>   
+                </HStack>
             </VStack>
             <VStack gap="8" w="100%" alignItems="center">
                 <HStack alignItems="flex-start">
@@ -56,7 +56,7 @@ const LandingSection = () => (
                     <HStack alignItems="flex-start" gap="4">
                         <Text textAlign="left" textStyle="xl">I have always been someone who wanted to do something new. That mindset changed when I read “Steal Like an Artist.” The book taught me that nothing in the creative world is entirely new,every idea is inspired by something that came before it, reimagined into something meaningful.
                             That message changed how I see creativity. I began to find value in what others might overlook. People started calling me an improviser because I believe nothing is truly a waste, we just have not discovered its purpose yet.</Text>
-                
+
                         <Spacer />
                         <Image
                             boxSize="250px"
@@ -83,8 +83,8 @@ const LandingSection = () => (
                     </Text>
                 </HStack>
             </VStack>
-            
-            <Box 
+
+            <Box
                 textAlign="center"
                 display="grid"
                 w="100%"
