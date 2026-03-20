@@ -3,6 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { VStack, HStack, Text, Heading} from "@chakra-ui/react";
 const MyService = "My Key Services"
 const Misson = "My Mission"
+const Stack = "My Stack"
 const Services =() => (
     <FullScreenSection
         justifyContent="center"
@@ -13,7 +14,7 @@ const Services =() => (
         <VStack gap="4" w="100%">
             <HStack  alignItems="center" display="flex" margin="5px">
                 <VStack>
-                    <Heading as="h1" size="md" textAlign="center">
+                    <Heading as="h2" size="2xl" textAlign="center">
                         {MyService}
                     </Heading>
                     <Text textAlign="center" textStyle="xl"> Core Development Services</Text>
@@ -24,7 +25,7 @@ const Services =() => (
             </HStack>
             <HStack w="100%" alignItems="center" display="flex" margin="5px">
                 <VStack>
-                    <Heading as="h1" size="md" textAlign="center" id="mymission-section">
+                    <Heading as="h2" size="2xl" textAlign="center" id="mymission-section">
                         {Misson}
                     </Heading>
                     <Text textAlign="center" textStyle="xl">Bringing ideas into life and giving it more value by designing real life solution</Text>
@@ -32,6 +33,12 @@ const Services =() => (
                     <Text textAlign="center" textStyle="xl">Creating an environment where little ideas become excellent solutions</Text>
                 </VStack>
             </HStack>
+                    <Heading as="h2" size="2xl" textAlign="center">
+                        {Stack}
+                    </Heading>
+                    <Text textAlign="center" textStyle="xl">HTML, CSS, JavaScript</Text>
+                    <Text textAlign="center" textStyle="xl">React, Chakra, Yup</Text>
+
         </VStack>
 
     </FullScreenSection>

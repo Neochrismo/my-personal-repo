@@ -8,29 +8,27 @@ const bio2 = "specialized in React";
 
 const HeroSection = () => (
  <FullScreenSection
-   justifyContent="center"
-   alignItems="center"
    isDarkBackground
    backgroundColor="#2A4365"
    display="flex"
  >
-   <VStack gap="16">
-     <VStack gap="6" alignItems="center">
-      <AvatarGroup>
-        <Avatar.Root>
-          <Avatar.Fallback name="Oluwaniyi Adeloye" />
-            <Avatar.Image src="https://i.pravatar.cc/150?img=7" size="2xl" />
-        </Avatar.Root>
-      </AvatarGroup>
-       <Heading as="h4" size="md" alignItems="center">
+   <VStack w= "100%">
+     <VStack gap="2" alignItems="center">
+        <AvatarGroup>
+          <Avatar.Root>
+            <Avatar.Fallback name="Oluwaniyi Adeloye" />
+              <Avatar.Image src="https://i.pravatar.cc/150?img=7" size="3xl" />
+          </Avatar.Root>
+        </AvatarGroup>
+       <Heading as="h4" size="md" alignItems="center" textAlign="center">
          {greeting}
        </Heading>
      </VStack>
-     <VStack gap="6">
-       <Heading as="h1" size="3xl" alignItems="center">
+     <VStack gap="2">
+       <Heading as="h1" size="lg" alignItems="center" textAlign="center">
          {bio1}
        </Heading>
-       <Heading as="h1" size="3xl" alignItems="center">
+       <Heading as="h1" size="lg" alignItems="center" textAlign="center">
          {bio2}
        </Heading>
      </VStack>

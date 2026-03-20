@@ -10,14 +10,12 @@ const MyMission = "From Inspiration to Impact";
 
 const LandingSection = () => (
     <FullScreenSection
-        justifyContent="center"
-        alignItems="center"
         isDarkBackground
         backgroundColor="rgba(31, 37, 54, 1)"
-        display="grid"
+        display="flex"
         direction={{ base: "column", md: "row" }}
     >
-        <VStack gap="16" w="100%">
+        <VStack gap="8" w="100%">
             <VStack w="100%" alignItems="center">
                 <HStack alignItems="flex-start" gap="4">
                     <Box
@@ -30,7 +28,13 @@ const LandingSection = () => (
                         </Heading>
                     </Box>
                 </HStack>
-                <HStack alignItems="flex-start" gap="4">
+                <Box alignItems="flex-start" gap="4">
+                    <Image
+                            boxSize="250px"
+                            src="/building.jpeg"
+                            alt="Building What Matters"
+                            float="right"
+                        />
                         <Text textAlign="left" textStyle="xl">
                             <Highlight query="yours and mine" styles={{ color: "teal.600" }}>
                             Every project starts with a story — yours and mine.
@@ -40,12 +44,8 @@ const LandingSection = () => (
                             </Text>
 
                         <Spacer />
-                        <Image
-                            boxSize="250px"
-                            src="/building.jpeg"
-                            alt="Building What Matters"
-                        />
-                </HStack>
+                        
+                </Box>
             </VStack>
             <VStack gap="8" w="100%" alignItems="center">
                 <HStack alignItems="flex-start">
@@ -53,17 +53,18 @@ const LandingSection = () => (
                         {StorySection}
                     </Heading>
                 </HStack>
-                    <HStack alignItems="flex-start" gap="4">
-                        <Text textAlign="left" textStyle="xl">I have always been someone who wanted to do something new. That mindset changed when I read “Steal Like an Artist.” The book taught me that nothing in the creative world is entirely new,every idea is inspired by something that came before it, reimagined into something meaningful.
-                            That message changed how I see creativity. I began to find value in what others might overlook. People started calling me an improviser because I believe nothing is truly a waste, we just have not discovered its purpose yet.</Text>
-
-                        <Spacer />
-                        <Image
+                    <Box flexDirection="column" gap="4">
+                         <Image
                             boxSize="250px"
                             src="/anartist.jpeg"
                             alt="Steal Like an Artist"
+                            float="right"
                         />
-                </HStack>
+                        <Text textAlign="left" textStyle="xl" textWrap="wrap">I have always been someone who wanted to do something new. That mindset changed when I read “Steal Like an Artist.” The book taught me that nothing in the creative world is entirely new,every idea is inspired by something that came before it, reimagined into something meaningful.
+                            That message changed how I see creativity. I began to find value in what others might overlook. People started calling me an improviser because I believe nothing is truly a waste, we just have not discovered its purpose yet.</Text>
+
+
+                </Box>
             </VStack>
             <VStack gap="8" w="100%" alignItems="center">
                 <HStack alignItems="flex-start">

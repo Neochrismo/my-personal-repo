@@ -33,6 +33,7 @@ const ContactMeSection = () => {
      'bot-field':'',
    },
    onSubmit: async (values,) => {
+    console.log(values);
      await submit("/contact", values);
     },
   validationSchema: Yup
