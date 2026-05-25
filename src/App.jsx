@@ -8,7 +8,7 @@ import HeroSection from './component/HeroSection';
 import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionBox = motion.create(Box);
+const MotionBox = motion(Box);
 const simpleFadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0,

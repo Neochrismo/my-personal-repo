@@ -15,13 +15,13 @@ const LandingSection = () => (
         display="flex"
         direction={{ base: "column", md: "row" }}
     >
-        <VStack gap="8" w="100%">
+        <VStack gap="8" w="100%" px={{ base: "6", md: "12"}}>
             <VStack w="100%" alignItems="center">
                 <HStack alignItems="flex-start" gap="4">
                     <Box
                         textAlign="center"
                         p="4"
-                        w="0.600"
+                        w="60%"
                     >
                         <Heading as="h1" size="lg" textAlign="center" fontWeight="semibold">
                             {MyStory}
@@ -36,15 +36,13 @@ const LandingSection = () => (
                             float="right"
                         />
                         <Text textAlign="left" textStyle="xl">
-                            <Highlight query="yours and mine" styles={{ color: "teal.600" }}>
                             Every project starts with a story — yours and mine.
-                            </Highlight>
+                            <span style={{ color: "teal.600" }}> yours and mine.</span>
                             <br />
                             I help clients transform ideas into meaningful digital experiences, that connect with people and grow businesses.
                             </Text>
 
                         <Spacer />
-                        
                 </Box>
             </VStack>
             <VStack gap="8" w="100%" alignItems="center">
@@ -74,9 +72,8 @@ const LandingSection = () => (
                 </HStack>
                 <HStack alignItems="flex-start" gap="4">
                     <Text textAlign="left" textStyle="xl">
-                        <Highlight query="potential" styles={{ color: "teal.600" }}>
                         Every concept has potential.
-                        </Highlight>
+                        <span style={{ color: "teal.600" }}> potential.</span>
                         <br />
                         Sometimes, others do not see it, not because your idea lacks value, but because its purpose has not been fully understood.<br />
                         That is where I come in. My passion lies in helping clients uncover that hidden potential, shaping raw ideas into digital products that inspire confidence and drive results.
@@ -87,7 +84,9 @@ const LandingSection = () => (
 
             <Box
                 textAlign="center"
-                display="grid"
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
                 w="100%"
                 color="white"
                 _hover={{ bg: "#333333"}}

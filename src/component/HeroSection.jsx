@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarGroup, Heading, VStack } from "@chakra-ui/react";
+import { Avatar, AvatarGroup, Heading, VStack,Image } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const greeting = "Hello, I am Oluwaniyi!";
@@ -12,14 +12,13 @@ const HeroSection = () => (
    backgroundColor="#2A4365"
    display="flex"
  >
-   <VStack w= "100%">
+   <VStack w= "100%" px={{ base: "6", md: "12"}}>
      <VStack gap="2" alignItems="center">
-        <AvatarGroup>
-          <Avatar.Root>
-            <Avatar.Fallback name="Oluwaniyi Adeloye" />
-              <Avatar.Image src="https://i.pravatar.cc/150?img=7" size="3xl" />
-          </Avatar.Root>
-        </AvatarGroup>
+      <Image
+        src="/myphoto.JPG"
+        alt="Oluwaniyi Adeloye"
+        style={{ borderRadius: "50%", width: "150px", height: "150px" }}
+      />
        <Heading as="h4" size="md" alignItems="center" textAlign="center">
          {greeting}
        </Heading>

@@ -4,6 +4,7 @@ import { VStack, HStack, Text, Heading} from "@chakra-ui/react";
 const MyService = "My Key Services"
 const Misson = "My Mission"
 const Stack = "My Stack"
+const Tools ="Tools & DevOps"
 const Services =() => (
     <FullScreenSection
         justifyContent="center"
@@ -11,7 +12,7 @@ const Services =() => (
         isDarkBackground
         backgroundColor="rgba(15, 34, 87, 1)"
     >
-        <VStack gap="4" w="100%">
+        <VStack gap="4" w="100%" px={{ base: "6", md: "12"}}>
             <HStack  alignItems="center" display="flex" margin="5px">
                 <VStack>
                     <Heading as="h2" size="2xl" textAlign="center">
@@ -37,8 +38,11 @@ const Services =() => (
                         {Stack}
                     </Heading>
                     <Text textAlign="center" textStyle="xl">HTML, CSS, JavaScript</Text>
-                    <Text textAlign="center" textStyle="xl">React, Chakra, Yup</Text>
-
+                    <Text textAlign="center" textStyle="xl">React, Chakra, Yup,Figma</Text>
+                    <Heading as="h2" size="2xl" textAlign="center">
+                        {Tools}
+                    </Heading>
+                    <Text textAlign="center" textStyle="xl">Git, GitHub, Vercel, Netlify</Text>
         </VStack>
 
     </FullScreenSection>
