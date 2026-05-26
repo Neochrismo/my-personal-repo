@@ -31,7 +31,7 @@ function App(){
           variants={simpleFadeIn}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1}}
         >
         <ContactMeSection />
         </MotionBox>
