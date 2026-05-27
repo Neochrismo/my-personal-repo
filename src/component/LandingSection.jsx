@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading, VStack, Text, Image, HStack, Spacer, Button } from "@chakra-ui/react";
+import { Box, Heading, VStack, Text, Image, HStack, Spacer, Button, Flex } from "@chakra-ui/react";
 import { LuArrowDown } from "react-icons/lu"
 
 const MyStory = "Building What Matters";
@@ -22,21 +22,20 @@ const LandingSection = () => (
                             {MyStory}
                         </Heading>
                 </HStack>
-                <Box flexDirection="column" gap="4">
-                    <Image
+                <Box gap="4">
+                     <Image
                             boxSize="250px"
                             src="/building.jpeg"
                             alt="Building What Matters"
                             float="right"
                         />
-                        <Text textAlign="left" textStyle="xl">
+                        <Spacer />
+                     <Text textAlign="left" textStyle="xl" flew-wrap="wrap">
                             Every project starts with a story — yours and mine.
                             <span style={{ color: "#319795" }}> yours and mine.</span>
                             <br />
                             I help clients transform ideas into meaningful digital experiences, that connect with people and grow businesses.
                             </Text>
-
-                        <Spacer />
                 </Box>
             </VStack>
             <VStack gap="8" w="100%" alignItems="center" >
