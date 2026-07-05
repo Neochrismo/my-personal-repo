@@ -8,31 +8,38 @@ import { faGithub,
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {Box, HStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ColorModeButton } from "../components/color-mode";
 
     const socials = [
     {
         icon: faEnvelope,
         url: "mailto:stephenniyiadeloye@gmail.com",
+        alwaysVisible: true,
     },
     {
         icon: faGithub,
         url: "https://github.com/dashboard",
+        alwaysVisible: true,
     },
     {
         icon: faLinkedin,
         url: "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0X0WD795SQ6OEY37x1dCDQ%3D%3D",
+        alwaysVisible: true,
     },
     {
         icon: faWhatsapp,
-        url: "https://wa.me/2349138017014"
+        url: "https://wa.me/2349138017014",
+        alwaysVisible: false,
     },
     {
         icon: faInstagram,
         url: "https://www.instagram.com/neochrismo55_webtech?igsh=MnBrYTU1N2Jnc294&utm_source=qr",
+        alwaysVisible: false,
     },
     {
         icon: faTwitter,
         url: "https://x.com/web_neochrismo?s=21",
+        alwaysVisible: false,
     },
     ];
 const Header = () => {
@@ -85,33 +92,40 @@ const Header = () => {
    >
      <Box color="white" maxWidth="1280px" margin="0 auto">
        <HStack
-         px={8}
-         py={4}
+         px={{ base: 2, md: 16 }}
+         py={{ base: 2, md: 6 }}
          justifyContent="space-between"
-         alignItems="flex-center"
+         alignItems="flex-start"
        >
          <nav>
-           <HStack gap={8}>
-             {socials.map(({ icon, url }) => (
-               <a
+           <HStack gap={3}>
+             {socials.map(({ icon, url, alwaysVisible }) => (
+              <Box
                  key={url}
+                 display={alwaysVisible ? "block" : { base: "none", md: "block" }}
+               >
+               <a
                  href={url}
                  target="_blank"
                  rel="noopener noreferrer"
                >
                  <FontAwesomeIcon icon={icon} size="2x" key={url} />
                </a>
+              </Box>
              ))}
            </HStack>
-         </nav>
-         <nav>
-           <HStack gap={8}>
+          </nav>
+          <nav>
+           <HStack gap={{ base: 4, md: 8 }}>
+            <Box display={{ base: "none", md: "block" }}>
              <a href="#mymission" onClick={handleClick("mymission")}>
                 Mission
              </a>
-             <a href="#contactme" onClick={handleClick("contactme")}>
+            </Box>
+             <a href="#contactme"onClick={handleClick("contactme")}>
                Contact Me
              </a>
+              <ColorModeButton />
            </HStack>
          </nav>
        </HStack>

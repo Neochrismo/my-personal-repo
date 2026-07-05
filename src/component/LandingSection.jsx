@@ -7,65 +7,73 @@ const MyStory = "Building What Matters";
 const StorySection = "Every Project Starts with a Story-Mine is Environmental-Driven";
 const MyPhilosophy = "Your Ideas are not Useless-They just need the Right Platform";
 const MyMission = "From Inspiration to Impact";
+import { useColorModeValue } from "../components/color-mode";
 
-const LandingSection = () => (
+const LandingSection = () => {
+    const bgColor = useColorModeValue( "blue.50","rgba(31, 37, 54, 1)" );
+
+    return(
     <FullScreenSection
-        isDarkBackground
-        backgroundColor="rgba(31, 37, 54, 1)"
+        backgroundColor={bgColor}
         display="flex"
-        direction={{ base: "column", md: "row" }}
     >
-        <VStack gap="8" w="100%">
-            <VStack w="100%" alignItems="center">
-                <HStack alignItems="flex-start" gap="4" borderBottom="20px" pb="4">
-                        <Heading as="h1" size="lg" textAlign="center" fontWeight="semibold">
+        <VStack gap="2">
+            <VStack>
+                <HStack alignItems="flex-start" borderBottom={{ base: "20px", md: "20px" }} pb={{ base: "2", md: "4" }}>
+                        <Heading as="h1" textStyle={{ base: "xl", md: "4xl"}} textAlign="center" fontWeight="semibold">
                             {MyStory}
                         </Heading>
                 </HStack>
-                <Box gap="4">
-                     <Image
-                            boxSize="250px"
+                <Box margin={{base: "10px", md: "2px"}}>
+                    {<Image
+                            boxSize={{base:"50%", md:"250px"}}
                             src="/building.jpeg"
                             alt="Building What Matters"
-                            float="right"
-                        />
-                        <Spacer />
-                     <Text textAlign="left" textStyle="xl" flew-wrap="wrap">
-                            Every project starts with a story — yours and mine.
+                            float={{ base: "right", md: "right" }}
+                            mb={{ base: 4, md: 0 }}
+                            ml={{ md: 4 }}
+                            mt={{ base: 4, md: 0 }}
+                        />}
+                     <Text textStyle={{ base: "md", md: "xl" }}>
+                            Every project starts with a story —
                             <span style={{ color: "#319795" }}> yours and mine.</span>
                             <br />
                             I help clients transform ideas into meaningful digital experiences, that connect with people and grow businesses.
                             </Text>
+
                 </Box>
             </VStack>
-            <VStack gap="8" w="100%" alignItems="center" >
+            <VStack border="20px" pb="4">
                 <HStack alignItems="flex-start">
-                    <Heading as="h2" size="2xl" textAlign="left">
+                    <Heading as="h2" textStyle={{ base: "xl", md: "4xl"}} textAlign="center" fontWeight="semibold" border="20px" pb="4">
                         {StorySection}
                     </Heading>
                 </HStack>
-                    <Box flexDirection="column" gap="4">
-                         <Image
-                            boxSize="250px"
+                    <Box margin={{base: "10px", md: "2px"}}>
+                         {<Image
+                            boxSize={{base:"50%", md:"250px"}}
                             src="/anartist.jpeg"
                             alt="Steal Like an Artist"
-                            float="right"
-                        />
-                        <Text textAlign="left" textStyle="xl">I have always been someone who wanted to do something new. That mindset changed when I read “Steal Like an Artist.” The book taught me that nothing in the creative world is entirely new,every idea is inspired by something that came before it, reimagined into something meaningful.
-                            That message changed how I see creativity. I began to find value in what others might overlook. People started calling me an improviser because I believe nothing is truly a waste, we just have not discovered its purpose yet.</Text>
+                            float={{ base: "right", md: "right" }}
+                            mb={{ base: 4, md: 0 }}
+                            ml={{ md: 4 }}
+                            mt={{ base: 5, md: 0 }}
+                        />}
+                        <Text textStyle= {{ base: "md", md: "xl" }}>I have always been someone who wanted to do something new. That mindset changed when I read “Steal Like an Artist.” The book taught me that nothing in the creative world is entirely new,every idea is inspired by something that came before it, reimagined into something meaningful.
+                            That message changed how I see creativity. I began to find value in what others might overlook. I believe nothing is truly a waste, we just have not discovered its purpose yet.</Text>
 
 
                 </Box>
             </VStack>
-            <VStack gap="8" w="100%" alignItems="center">
-                <HStack alignItems="flex-start">
-                 <Heading as="h2" size="2xl" textAlign="center">
+            <VStack>
+                <HStack display="flex-start">
+                 <Heading as="h2" size= {{ base: "xl", md: "4xl"}} textAlign="center" border="20px" pb="4" fontWeight="semibold">
                     {MyPhilosophy}
                  </Heading>
                 </HStack>
                 <HStack alignItems="flex-start" gap="4">
-                    <Text textAlign="left" textStyle="xl">
-                        Every concept has potential.
+                    <Text textAlign="left" textStyle= {{ base: "md", md: "xl" }} margin={{base: "10px", md: "2px"}}>
+                        Every concept has
                         <span style={{ color:"#319795" }}> potential.</span>
                         <br />
                         Sometimes, others do not see it, not because your idea lacks value, but because its purpose has not been fully understood.<br />
@@ -75,29 +83,23 @@ const LandingSection = () => (
                 </HStack>
             </VStack>
 
-            <Box
-                textAlign="center"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                w="100%"
-                color="white"
-                _hover={{ bg: "#333333"}}
-            >
-                <Text fontWeight="bold" size="3xl">WHY I BUILD</Text>
+            <Box>
+                <Text fontWeight="bold" size="3xl" textAlign="center">WHY I BUILD</Text>
                 <Heading as="h2" size="2xl" textAlign="center">
                     {MyMission}
                     </Heading>
-                    <Text alignItems="flex-start" textStyle="xl">This belief sparked my journey into web development, turning creativity into clarity, and ideas into results.
+                    <Text alignItems="flex-start" textStyle= {{ base: "md", md: "xl" }} margin={{base: "10px", md: "0"}}>This belief sparked my journey into web development, turning creativity into clarity, and ideas into results.
                     Today, I build with one goal:<br /> To create meaningful digital experiences that truly matter to you and your business.</Text>
             </Box>
             <Button
-            color="black"
-            _hover={{bg:"blue"}}>
+            color="#F59E0B"
+            _hover={{bg:"white"}}>
                  Contact me now <LuArrowDown />
             </Button>
         </VStack>
     </FullScreenSection>
 );
+
+}
 
 export default LandingSection;

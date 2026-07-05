@@ -15,11 +15,15 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../Hook/useSubmitHook";
 import {useAlertContext} from "../context/alertContext";
+import { useColorModeValue } from "../components/color-mode";
 
 /**
 * Covers a complete form implementation using formik and yup for validation
 */
 const ContactMeSection = () => {
+  const bgColor = useColorModeValue("blue.50", "rgba(31, 37, 54, 1)");
+  const submitBg = useColorModeValue("teal.500", "teal.300");
+  const submitHoverBg = useColorModeValue("teal.600", "teal.400");
  const { onOpen } = useAlertContext();
  const { isLoading, response, submit, clearResponse } = useSubmit();
 
@@ -64,12 +68,11 @@ const ContactMeSection = () => {
 
  return (
    <FullScreenSection
-     isDarkBackground
-     backgroundColor="rgba(15, 34, 87, 1)"
+     backgroundColor= {bgColor}
      gap={8}
      py={4}
    >
-     <VStack w="100%" p={16} alignItems="center" maxW="1024px" alignContent="flex">
+     <VStack alignContent="flex">
        <Heading as="h1" id="contactme-section" textAlign="center">
          Contact me
        </Heading>
@@ -122,12 +125,12 @@ const ContactMeSection = () => {
              <Button
              type="submit"
              colorScheme="black"
-             backgroundColor="blue"
+             backgroundColor={submitBg}
              width="full"
              disabled={!formik.isValid}
              isLoading={isLoading}
             //  color="white"
-             _hover={{bg: "black"}}>
+             _hover={{bg: submitHoverBg}}>
                Submit
              </Button>
            </VStack>
