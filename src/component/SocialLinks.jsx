@@ -4,6 +4,7 @@ import { faGithub,
     faInstagram,
     faLinkedin,
     faTwitter,
+    faTiktok,
     faWhatsapp,} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {Box, HStack } from "@chakra-ui/react";
@@ -18,17 +19,22 @@ import { ColorModeButton } from "../components/color-mode";
     },
     {
         icon: faGithub,
-        url: "https://github.com/dashboard",
+        url: "https://github.com/Neochrismo",
         alwaysVisible: true,
     },
     {
+        icon: faTiktok,
+        url: "https://www.tiktok.com/@neo_chrismo_web",
+        alwaysVisible: false,
+    },
+    {
         icon: faLinkedin,
-        url: "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0X0WD795SQ6OEY37x1dCDQ%3D%3D",
+        url: "www.linkedin.com/in/neochrismo-web-a0758319a",
         alwaysVisible: true,
     },
     {
         icon: faWhatsapp,
-        url: "https://wa.me/2349138017014",
+        url: "https://wa.me/2348020562579",
         alwaysVisible: false,
     },
     {
