@@ -29,7 +29,7 @@ import { ColorModeButton } from "../components/color-mode";
     },
     {
         icon: faLinkedin,
-        url: "www.linkedin.com/in/neochrismo-web-a0758319a",
+        url: "https://www.linkedin.com/in/neochrismo-web-a0758319a",
         alwaysVisible: true,
     },
     {
