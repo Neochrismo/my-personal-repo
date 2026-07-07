@@ -24,6 +24,9 @@ const ContactMeSection = () => {
   const bgColor = useColorModeValue("blue.50", "rgba(31, 37, 54, 1)");
   const submitBg = useColorModeValue("teal.500", "teal.300");
   const submitHoverBg = useColorModeValue("teal.600", "teal.400");
+  const borderColor = useColorModeValue("gray.300", "gray.600");
+  const focusBorderColor = useColorModeValue("teal.500", "teal.300");
+  const placeholderColor = useColorModeValue("gray.400", "gray.500");
  const { onOpen } = useAlertContext();
  const { isLoading, response, submit, clearResponse } = useSubmit();
 
@@ -86,6 +89,11 @@ const ContactMeSection = () => {
                <Input
                  id="firstName"
                  name="firstName"
+                 borderColor={borderColor}
+                 _placeholder={{ color: placeholderColor }}
+                 _focus={{ borderColor: focusBorderColor, boxShadow:`0 0 0 1px ${focusBorderColor}`  }}
+                 placeholder="Your name"
+                 type="text"
                  {...formik.getFieldProps("firstName")}
                />
                <Field.ErrorText>{formik.errors.firstName}</Field.ErrorText>
@@ -95,6 +103,10 @@ const ContactMeSection = () => {
                <Input
                  id="email"
                  name="email"
+                 borderColor={borderColor}
+                 _placeholder={{ color: placeholderColor }}
+                 _focus={{ borderColor: focusBorderColor, boxShadow:`0 0 0 1px ${focusBorderColor}`  }}
+                  placeholder="Your email"
                  type="email"
                  {...formik.getFieldProps("email")}
                />
@@ -103,7 +115,11 @@ const ContactMeSection = () => {
              <Field.Root invalid={!!formik.errors.type && formik.touched.type}>
                <Field.Label htmlFor="type">Type of enquiry</Field.Label>
                <NativeSelect.Root>
-               <NativeSelect.Field id="type" name="type" {...formik.getFieldProps("type")}>
+               <NativeSelect.Field
+               id="type"
+               name="type"
+               borderColor={borderColor}
+               {...formik.getFieldProps("type")}>
                  <option value="hireMe">Freelance project proposal</option>
                  <option value="openSource">Open source consultancy session</option>
                  <option value="other">Other</option>
@@ -118,6 +134,10 @@ const ContactMeSection = () => {
                  id="comment"
                  name="comment"
                  height={250}
+                  borderColor={borderColor}
+                  _placeholder={{ color: placeholderColor }}
+                  _focus={{ borderColor: focusBorderColor, boxShadow:`0 0 0 1px ${focusBorderColor}`  }}
+                  placeholder="Please, let us know how we can help you"
                  {...formik.getFieldProps("comment")}
                />
                <Field.ErrorText>{formik.errors.comment}</Field.ErrorText>
